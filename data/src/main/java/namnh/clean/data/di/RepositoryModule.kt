@@ -32,37 +32,15 @@ private fun appDatabase(context: Context): DatabaseManager = Room.databaseBuilde
 private fun contentResolver(context: Context): ContentResolver = context.contentResolver
 
 val repositoryModule = module {
-
-    // androidContext()
-    single<SharedPrefApi> { SharedPrefApiImpl(/*context*/get(), /*gson*/get()) }
-    single<DatabaseApi> { DatabaseApiImpl(/*DatabaseManager*/get()) }
-
-    single { UserLocalDataSource(/*DatabaseApi*/get(), /*SharedPrefApi*/get()) }
-    single { UserRemoteDataSource(/*GithubApi*/get()) }
-    single<UserRepository> {
-        UserRepositoryImpl(
-            /*UserRemoteDataSource*/get(),
-            /*UserLocalDataSource*/get(),
-            /*DataMapper*/get()
-        )
-    }
-
-    single { /*DataMapper*/ DataMapper() }
-
-    single { RepoLocalDataSource(/*DatabaseApi*/get(), /*SharedPrefApi*/get()) }
-    single { RepoRemoteDataSource(/*GithubApi*/get()) }
-    single<RepoRepository> {
-        RepoRepositoryImpl(
-            /*RepoRemoteDataSource*/get(),
-            /*RepoLocalDataSource*/get(),
-            /*DataMapper*/get()
-        )
-    }
-
-    single { contentResolver(/*ApplicationContext*/get()) }
-
-    single {
-        /*DatabaseManager*/
-        appDatabase(/*ApplicationContext*/get())
-    }
+    single<SharedPrefApi> { SharedPrefApiImpl(get(), get()) }
+    single<DatabaseApi> { DatabaseApiImpl(get()) }
+    single { UserLocalDataSource(get(), get()) }
+    single { UserRemoteDataSource(get()) }
+    single<UserRepository> { UserRepositoryImpl(get(), get(), get()) }
+    single { DataMapper() }
+    single { RepoLocalDataSource(get(), get()) }
+    single { RepoRemoteDataSource(get()) }
+    single<RepoRepository> { RepoRepositoryImpl(get(), get(), get()) }
+    single { contentResolver(get()) }
+    single { appDatabase(get()) }
 }

@@ -2,6 +2,7 @@ package namnh.clean.github.model.mapper
 
 import namnh.clean.domain.entity.Repo
 import namnh.clean.github.model.RepoModel
+import namnh.clean.shared.adapter.RecyclerViewItem
 
 class RepoModelMapper(private val ownerMapper: OwnerModelMapper) :
     PresentationMapper<Repo, RepoModel>() {

@@ -20,9 +20,8 @@ private fun buildHttpLog(): HttpLoggingInterceptor {
 }
 
 val networkModule = module {
-    single { /*Gson*/ buildGson() }
+    single { buildGson() }
     single {
-        /*GithubApi*/
         ServiceGenerator.generate(
             ApiConfig.BASE_URL,
             GithubApi::class.java,

@@ -26,9 +26,9 @@
 -keepnames class com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 
 # Keep Responses & Requests
--keep class namnh.clean.github.data.model.** { *;}
--keep class namnh.clean.github.data.repository.source.remote.api.request.** { *;}
--keep class namnh.clean.github.data.repository.source.remote.api.response.** { *;}
+-keep class namnh.clean.sample.data.model.** { *;}
+-keep class namnh.clean.sample.data.repository.source.remote.api.request.** { *;}
+-keep class namnh.clean.sample.data.repository.source.remote.api.response.** { *;}
 
 # Keep all custom views
 -keep class namnh.clean.shared.widgets.** { *;}

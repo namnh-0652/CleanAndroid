@@ -22,7 +22,7 @@ import org.koin.core.qualifier.named
 abstract class BaseFlowUseCase<in Input : BaseInput, Output> : KoinComponent {
     open val dispatchersProvider = get<DispatchersProvider>(named(IO))
 
-    protected abstract suspend fun buildUseCase(input: Input): Flow<Output>
+    abstract suspend fun buildUseCase(input: Input): Flow<Output>
 
     private var controlledRunner = ControlledRunner<Unit>()
 
@@ -34,7 +34,9 @@ abstract class BaseFlowUseCase<in Input : BaseInput, Output> : KoinComponent {
             try {
                 withContext(dispatchersProvider.dispatcher()) {
                     buildUseCase(input).handleErrors {
-                        response(it)
+                        withContext(Dispatchers.Main) {
+                            response(it)
+                        }
                     }.collect {
                         withContext(Dispatchers.Main) {
                             response(it)
@@ -43,12 +45,12 @@ abstract class BaseFlowUseCase<in Input : BaseInput, Output> : KoinComponent {
                 }
             } catch (cancellationException: CancellationException) {
                 response(cancellationException)
-            } catch (e: Exception) {
-                response(e)
+            } catch (throwable: Throwable) {
+                response(throwable)
             }
         }
     }
 }
 
 @ExperimentalCoroutinesApi
-fun <T> Flow<T>.handleErrors(error: (Throwable) -> Unit): Flow<T> = catch { e -> error(e) }
+fun <T> Flow<T>.handleErrors(error: suspend (Throwable) -> Unit): Flow<T> = catch { e -> error(e) }

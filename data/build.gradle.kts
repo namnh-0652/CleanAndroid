@@ -48,8 +48,7 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":shared"))
     implementation(Deps.kotlin_stdlib)
-    implementation(Deps.support_app_compat)
-    implementation(Deps.support_core_ktx)
+    implementation(Deps.appcompat)
 
     implementation(Deps.coroutines_core)
     implementation(Deps.coroutines_android)
@@ -66,6 +65,4 @@ dependencies {
     implementation(Deps.koin_android)
 
     testImplementation(Deps.junit)
-    androidTestImplementation(Deps.atsl_runner)
-    androidTestImplementation(Deps.espresso_core)
 }

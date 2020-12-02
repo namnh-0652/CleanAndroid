@@ -1,11 +1,11 @@
 package namnh.clean.domain.scheduler
 
+import java.util.concurrent.atomic.AtomicReference
+import kotlin.DeprecationLevel.ERROR
 import kotlinx.coroutines.*
 import kotlinx.coroutines.CoroutineStart.LAZY
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import java.util.concurrent.atomic.AtomicReference
-import kotlin.DeprecationLevel.ERROR
 
 /**
  * A helper class to execute tasks sequentially in coroutines.

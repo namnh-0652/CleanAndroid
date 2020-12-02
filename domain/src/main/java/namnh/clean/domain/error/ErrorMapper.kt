@@ -1,5 +1,5 @@
 package namnh.clean.domain.error
 
-interface ErrorMapper<T> {
-    fun map(throwable: Throwable): T
+interface ErrorMapper {
+    fun map(throwable: Throwable): ErrorEntity
 }

@@ -2,7 +2,7 @@ package namnh.clean.data.repository.source.remote.api.response
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import namnh.clean.data.model.RepoData
+import namnh.clean.data.repository.source.remote.model.NwRepo
 
 /**
  * Simple object to hold repo search responses. This is different from the Entity in the database
@@ -10,11 +10,6 @@ import namnh.clean.data.model.RepoData
  * column.
  */
 data class RepoSearchResponse(
-
-    @Expose
-    @SerializedName("total_count")
-    val total: Int = 0,
-    @Expose
-    @SerializedName("items")
-    val items: List<RepoData>
+    @Expose @SerializedName("total_count") val total: Int = 0,
+    @Expose @SerializedName("items") val items: List<NwRepo>?
 )

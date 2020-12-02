@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "40899063904",
+    "firebase_url": "https://cleanandroid-954f0.firebaseio.com",
+    "project_id": "cleanandroid-954f0",
+    "storage_bucket": "cleanandroid-954f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40899063904:android:5a9b6f1d47a74f88191305",
+        "android_client_info": {
+          "package_name": "namnh.clean.sample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40899063904-csanqsrl511fdpacv7t173e57hd1pvkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTcU7o8l7UpLasX3qOV2pccsGu0n56_bw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40899063904-csanqsrl511fdpacv7t173e57hd1pvkg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40899063904:android:c9e9d096f46357e4191305",
+        "android_client_info": {
+          "package_name": "namnh.clean.sample.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40899063904-csanqsrl511fdpacv7t173e57hd1pvkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTcU7o8l7UpLasX3qOV2pccsGu0n56_bw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40899063904-csanqsrl511fdpacv7t173e57hd1pvkg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40899063904:android:cce8c8e6e1491031191305",
+        "android_client_info": {
+          "package_name": "namnh.clean.sample.stg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40899063904-csanqsrl511fdpacv7t173e57hd1pvkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTcU7o8l7UpLasX3qOV2pccsGu0n56_bw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40899063904-csanqsrl511fdpacv7t173e57hd1pvkg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

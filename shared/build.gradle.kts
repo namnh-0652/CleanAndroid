@@ -45,12 +45,9 @@ android {
 
 dependencies {
     implementation(Deps.kotlin_stdlib)
-    implementation(Deps.support_app_compat)
-    implementation(Deps.support_core_ktx)
-    implementation(Deps.support_design)
-    implementation(Deps.support_recyclerview)
+    implementation(Deps.appcompat)
+    implementation(Deps.material)
+    implementation(Deps.recyclerview)
 
     testImplementation(Deps.junit)
-    androidTestImplementation(Deps.atsl_runner)
-    androidTestImplementation(Deps.espresso_core)
 }

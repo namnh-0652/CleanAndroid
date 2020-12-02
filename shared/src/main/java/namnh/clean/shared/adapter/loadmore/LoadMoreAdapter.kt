@@ -4,12 +4,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.LayoutRes
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import namnh.clean.shared.R
+import namnh.clean.shared.extensions.isVisible
 
 class LoadMoreAdapter internal constructor(
     adapter: RecyclerView.Adapter<*>
@@ -393,7 +393,7 @@ class LoadMoreAdapter internal constructor(
         }
 
         fun bind(isVisible: Boolean) {
-            if (isVisible == itemView.isVisible) return
+            if (isVisible == itemView.isVisible()) return
             itemView.visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
         }
     }

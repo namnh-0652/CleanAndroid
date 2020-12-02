@@ -28,6 +28,17 @@ version: 2.1
 #          name: Run Unit Tests
 #          command: ./gradlew testDevelopDebugUnitTest
 #          # reports at app/build/reports/tests/.../index.html
+#        - run:
+#            name: Save UnitTest results
+#            command: |
+#              mkdir -p ~/test-results/junit/
+#              find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/test-results/junit/ \;
+#            when: always
+#        - store_test_results:
+#            path: ~/test-results
+#        - store_artifacts:
+#            path: app/build/reports
+#            destination: reports
 #      - save_cache:
 #          paths:
 #            - ~/.gradle

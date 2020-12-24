@@ -1,7 +1,7 @@
 package namnh.clean.sample.di
 
-import namnh.clean.data.scheduler.DefaultDispatcher
-import namnh.clean.data.scheduler.IODispatcher
+import namnh.clean.data.dispatcher.DefaultDispatcher
+import namnh.clean.data.dispatcher.IODispatcher
 import namnh.clean.domain.scheduler.DEFAULT
 import namnh.clean.domain.scheduler.DispatchersProvider
 import namnh.clean.domain.scheduler.IO

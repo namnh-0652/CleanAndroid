@@ -1,4 +1,4 @@
-package namnh.clean.shared.constants
+package namnh.clean.domain.error
 
 /**
  * All app defined error code should be added here.

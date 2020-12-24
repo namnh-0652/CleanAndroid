@@ -1,6 +1,6 @@
 package namnh.clean.data.repository
 
-import namnh.clean.data.repository.source.collectionMap
+import namnh.clean.shared.helper.collectionMap
 import namnh.clean.data.repository.source.local.RepoLocalDataSource
 import namnh.clean.data.repository.source.remote.RepoRemoteDataSource
 import namnh.clean.data.repository.source.remote.mapper.NwRepoMapper

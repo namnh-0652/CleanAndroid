@@ -1,4 +1,4 @@
-package namnh.clean.data.repository.source
+package namnh.clean.shared.helper
 
 inline fun <I, O> collectionMap(input: List<I>, singleMap: (I) -> O): List<O> {
     return input.map(singleMap)

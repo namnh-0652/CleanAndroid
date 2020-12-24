@@ -12,7 +12,7 @@ import org.koin.core.get
 import org.koin.core.qualifier.named
 
 /**
- * For Oneshot UseCase
+ * For Oneshot UseCase.
  */
 abstract class BaseUseCase<in Input : BaseInput, out Output> : KoinComponent {
     open val dispatchersProvider = get<DispatchersProvider>(named(IO))
